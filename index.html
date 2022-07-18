@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title></title>
+    <meta name="description" content="" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://use.typekit.net/tod5zoc.css">
+    <link rel="stylesheet" href="https://use.typekit.net/tod5zoc.css">
+  </head>
+  
+  <body onload="javascript:handleClick()">
+    <div class="mainContainer">
+      <!--0. MAIN SECTION-->
+      <section class="mainSection">
+        <!--2.Dropdown Menu Section-->
+        <div id="dropper" class="dropDown">
+          <div id="dropdownBtnContainer">
+            <div class="droptextandline">
+              <a href="#about" onclick = "handleDropDown()">About</a>
+              <div class="dropline"></div>
+            </div>
+            <div class="droptextandline">
+              <a href="#projects" onclick = "handleDropDown()">Projects</a>
+              <div class="dropline"></div>
+            </div>
+            <div class="droptextandline">
+              <a href="#hobbies" onclick = "handleDropDown()">Hobbies</a>
+              <div class="dropline"></div>
+            </div>
+          </div>
+        </div>
+        <!--2.Left Column-->
+        <div class="leftColumn">
+          <div id = "seLogo" class="logoContainer">Se</div>
+          <!--3.Social Links section-->
+          <div class="btnContainer">
+            <span>ELSEWHERE</span>
+            <div class="socialContainer">
+              <a target="blank" href="https://www.instagram.com/babblingbabble/?hl=en"><img  src="./img/InstaIcon.png"></a>
+              <a target="blank" href="https://www.linkedin.com/in/sebastian-enciso-a7a112241/"><img onclick = "console.log('worked')" src="./img/linkedinIcon.png"></a>
+              <a target="blank" href="https://github.com/Sebastianbabble"><img onclick = "console.log('yeha')" src = "./img/githubIcon.png"></a>
+            </div>
+          </div>
+        </div>
+        <!--4.Intro section-->
+        <div data-aos="fade-right"  data-aos-delay="500"
+        data-aos-duration="1000" class="intro">
+          <h4>INTRO</h4>
+          <div class="introText">
+            <div>Hey, I'm Sebastian, an aspiring Web Developer from</div>
+            <div>Los Angeles, CA</div>
+          </div>
+        </div>
+        <!--5.Right Section-->
+        <div class="rightColumn">
+            <div class="hamContainer">
+                <span id="hamLogo"
+                  ><img id="hammer" height="40" width="40" src="./img/hamburger.png"
+                /></span>
+              </div>
+            <img id = "aboutimg" class = "aboutImage" src = "./img/About.JPG" height="100%" width="100%">
+            <img id = "hobbiesimg" class = "aboutImage" src = "./img/enjoy.jpg" height="100%" width="100%">
+            <img id = "projectsimg" class = "aboutImage" src = "./img/whitescreen.jpeg" height="100%" width="100%">
+          
+          <!--6.Navigation buttons-->
+          <div data-aos="fade-up" data-aos-delay="100" id = "navC" class="navContainer">
+            <div class="navBtns">
+              <p>MY WORK</p>
+              <div id = "aboutid" class="textandline">
+                <div class="textline"></div>
+                <a href="#about">About</a>
+              </div>
+              <div id = "projectid" class="textandline">
+                <div class="textline"></div>
+                <a href="#projects">Projects</a>
+              </div>
+              <div id = "hobbieid" class="textandline">
+                <div class="textline"></div>
+                <a href="#hobbies">Hobbies</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section >
+      <!--About Section-->
+      <section id="about" class = "aboutContainer">
+        <!--Top section-->
+        <div data-aos="fade-up" data-aos-duration="1000" mirror="true" class = "sectionImgContainer">
+            <img  id="aboutSection" src = "./img/About.JPG" height="100%" width="100%">
+        </div>
+
+        <!--Bottom section-->
+        <div class="sectionDescription">
+          <div class = "abt">
+            <h1 id="aboutTitleSection">About</h1>
+          </div>
+            <p data-aos="fade-left" data-aos-duration="1000" id="aboutDescriptionSection">Graduate from California State Northrdige with a degree in Computer Science. Enjoys being creative and working with others. Originally got interested into computer science through music software. I enjoy creating web applications and have lately been focused on blockchain technology.</p>
+            <div class = "downloadContainer">
+              <span>></span>
+              <a href="Resume.pdf" id="downloadCV" download>DOWNLOAD RESUME </a>
+
+            </div>
+
+        </div>
+
+      </section>
+      <!--Projects-->
+
+      <section id="projects" class = "projectContainer">
+          <h1 id ="projectsTitle">Projects</h1>
+
+
+        <div class="ppContainer">
+
+       
+        <div data-aos="fade-up" data-aos-duration="1000" class="projectCards" id ="elysium">
+
+            <div class ="projectImgContainer">
+                <img src="img/elysium.png">
+            </div>
+            <div class ="contentContainer">
+                <h1 class ="titleSingle">Elysium</h1>
+                <p>Elysium was inspired by AOL Instant Messenger. It's a chat app we built with C++ using Qt Framework for the UI for the front end. The backend was built with C++ using only the standard library </p>
+               
+            </div>
+            <div class="checkOutBtn">
+              <a id="directional">></a>
+              <a id ="CIO" target="blank" href="https://github.com/xdmtk/elysium">CHECK IT OUT</a>
+
+            </div>
+        </div>
+        <div data-aos="fade-up" data-aos-duration="1000"  class="projectCards" id ="miniDb">
+            <div class ="projectImgContainer">
+                <img  src="img/minidb.png">
+            </div>
+            <div class ="contentContainer">
+                <h1 class ="titleSingle">Mini relational DB</h1>
+                <p>This was a class project in which we had to create an SQL like database with C++. Functionaly includes building a table and inserting columns into that table. It also implements conditonals for select queries.  </p>
+            </div>
+            <div class="checkOutBtn">
+              <a id="directional">></a>
+              <a id ="CIO" target="blank" href="https://github.com/Sebastianbabble/Mini-Relational-Database">CHECK IT OUT</a>
+
+            </div>
+
+        </div>
+      </div>
+        
+        <!-- <div data-aos="fade-left" data-aos-duration="2000" class="projectCards" id="parkGym">
+            Park Gym
+        </div> -->
+      </section>
+
+      <!--Hobbies-->
+      <section id ="hobbies" class = "hobbiesContainer">
+        <!--Photos-->
+        <div  class = "sectionImgContainer2">
+          <!-- <video  class="hobbiePhotos" autoplay muted loop controls="controls"  name="meHike">
+            <source id="hobbieVideo" src="./img/meHike.MOV">
+          </video> -->
+            <img class="hobbiePhotos"  id="skateimg" src = "./img/enjoy.jpg" height="100%" width="100%">
+            <img class="hobbiePhotos" id="hikingimg" src = "./img/hiking.jpg" height="100%" width="100%">
+            <img class="hobbiePhotos" id="musicimg" src = "./img/headphones.jpeg" height="100%" width="100%">
+            <img class="hobbiePhotos" id="nftimg" src = "./img/NFT.png" height="100%" width="100%">
+        </div>
+        <!--TItle-->
+        <div id="htc" class="titleHobbie">
+          <div  class = "hobbietitlecontainer">
+            <h1>HOBBIES
+            </h1>
+            <!-- <span id="hobbiequote">THE THINGS I ENJOY</span> -->
+          </div>
+        
+        </div>
+        <!--HobbieNav-->
+        <div data-aos="fade-up" data-aos-duration="1000" class="hobbieNav">
+            <div class="hobbieLinks">
+              <div class="hobbietextline">
+                
+                <a id="skate">Skating</a>
+                <div id="skateline"></div>
+              </div>
+              <div class="hobbietextline">
+                <a id="hike">Hiking</a>
+                <div id="hikeline"></div>
+              </div>
+              <div class="hobbietextline">
+                <a id="music">Music</a>
+                <div id="musicline"></div>
+              </div>
+              <div class="hobbietextline">
+                <a id="nfts">NFTs</a>
+                <div id="nftline"></div>
+
+              </div>
+            </div>
+        </div>
+        <!--hobbieDescription-->
+        <div class="hobbieDescription">
+          <div data-aos="fade-up" data-aos-duration="1000" class="hCard" id="skateInfo">
+            <img class="hobbiePhotosM"  id="skateimg" src = "./img/enjoy.jpg" height="100%" width="100%">
+
+            <h1>Skating</h1>
+
+            <p>Skating has always done so much for me physically and mentally. I've been skating my whole life and its always been something that been apart of me. I've learned many life lessons skating and will continue to do it until I can't</p>
+          </div>
+          <div class="hCard" id="hikeInfo">
+            <img class="hobbiePhotosM" id="hikingimgm" src = "./img/hiking.jpg" height="100%" width="100%">
+
+            <h1>Hiking</h1>
+          <p>I love exploring and being outdoors. Before covid I was doing a backpacking trip every year with some friends. Our trips would consist hikes in the 30-40 mile range which we would finish in about 3-4 days. I plan on getting a few small overnight trip in this year.   </p>
+        </div>
+         
+          <div data-aos="fade-up" data-aos-duration="1000" class="hCard" id="musicInfo">
+            <img class="hobbiePhotosM" id="musicimgm" src = "./img/headphones.jpeg" height="100%" width="100%">
+
+            <h1>Music</h1>
+            <p>Muisc has always played a big part in my life. I enjoy all generes of music and find it theraputic. I enjoy making music on my computer when I have time. I would explain the music I make as a experimental/instrumental hip-hop </p>
+            <div id="hL"class="hobbiesLinks">
+              <div id ="arrow">
+                <a>></a>
+      
+              </div>
+              <div id="mysounds">
+                <a>MY SOUNDS</a>
+              </div>
+      
+            </div>
+          </div>
+          <div data-aos="fade-up" data-aos-duration="1000" class="hCard" id="nftsInfo">
+            <img class="hobbiePhotosM" id="nftimgm" src = "./img/NFT.png" height="100%" width="100%">
+
+            <h1>NFTs</h1>
+            <p>Over the last year I've been involved with NFT's and the technology behind it. I have some NFT's but find the space very intersting. I've dabbled a bit with the technology and continue to learn more about it.</p>
+      
+                 <div class="hobbiesLinks">
+              <div id ="arrow">
+                <a>></a>
+      
+              </div>
+              <div id="mywallet">
+                <a>MY WALLET</a>
+      
+              </div>
+      
+            </div>
+          </div> 
+        </div>
+        
+      </section>
+
+      <!-- <section data-aos-anchor-placement="top-center" data-aos="fade-up" ><div data-aos="flip-up"  class = 'outside'>hey people</div> -->
+        <!-- <div
+        data-aos="fade-up"
+        data-aos-offset="200"
+        data-aos-delay="50"
+        data-aos-duration="1000"
+        data-aos-easing="ease-in-out"
+        data-aos-mirror="true"
+        data-aos-once="false"
+        data-aos-anchor-placement="top-center"
+      > -->
+      </div>
+    </section>
+    </div>
+
+     <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+    <script>
+        AOS.init({
+          once:false
+        });
+      </script>  
+          <script src="index.js"></script>
+
+    <!-- <script src="" async defer></script>
+    <script src="" async defer></script> -->
+  </body>
+</html>

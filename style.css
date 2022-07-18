@@ -1,0 +1,1009 @@
+body{
+    margin: 0;
+    padding: 0;
+    scroll-behavior: smooth;
+}
+html{
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+.mainContainer{
+    height: auto;
+    box-sizing: border-box;
+    /* border: 5px solid black; */
+    background-color: #eff0f3;
+    display: block;
+    /* flex-direction: column; */
+
+}
+.mainSection{
+    /* border: 4px solid red; */
+    height: 100vh;
+    display: grid;
+    /* overflow:auto; */
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+
+}
+.leftColumn{
+    display: grid;
+    grid-template-columns: repeat(5,1fr);
+    grid-template-rows: repeat(5,1fr);
+    grid-row: 1/9;
+    grid-column: 1/3;
+    background-color: white;
+    /* border: 2px solid pink */
+}
+.rightColumn{
+    display: grid;
+    grid-template-columns: repeat (4,1fr);
+    grid-template-rows: 1fr 1fr 1fr 1fr;
+    grid-row: 1/9;
+    grid-column: 3/9;
+    /* z-index: 1; */
+    /* z-index: 0; */
+    /* background-color: #eff0f3;
+    z-index: -4; */
+    /* border: 2px solid black; */
+}
+.logoContainer{
+    position: fixed;
+    /* border: 2px solid black; */
+    /* text-align: center; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 35px;
+    margin: 15px;
+    height: 100px;;
+    width: 100px;
+    background-color: #ff8e3c;
+    z-index: 3 ;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+
+}
+.intro{
+    /* border: 2px solid blue; */
+    /* height: 100px; */
+    grid-row: 3/5;
+    grid-column: 1/6;
+    margin-left: 60px;
+    z-index: 2;
+}
+.introText{
+    font-size: 30px;
+    font-family: playfair-display,serif;
+    font-weight: 400;
+    font-style: normal;
+
+}
+.intro > h4{
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: roboto, sans-serif;
+font-weight: 500;
+font-style: normal;
+color: grey;
+}
+.hamContainer{
+  /* border: 2px solid orange; */
+  grid-column: 3/4;
+  grid-row: 1/1;
+  z-index: 3;
+}
+#hamLogo{
+    display: flex;
+    position: fixed;
+    justify-content: center;
+
+    /* border: 2px solid black; */
+    right: 10px;
+    height: 50px;
+    width: 50px;
+    margin: 15px;
+    background-color: #ff8e3c;
+}
+#hamLogo > img{
+    align-self: center;
+}
+.navContainer{
+    /* border: 2px solid red; */
+    margin-right: 60px;
+    grid-row: 2/5;
+    grid-column: 4/5;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: center; */
+    align-self: right;
+    min-width: 100px;
+    z-index: 2;
+}
+.btnContainer{
+    align-self: end;
+    /* border: 2px solid black; */
+    grid-row: 4/5;
+    grid-column: 2/5;
+    height: 80px;
+    align-items: right;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    
+}
+.btnContainer > span{
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: grey;
+}
+.navBtns{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid black; */
+    text-align: right;
+    height: 60%;
+    justify-content: space-around;
+}
+.navBtns > p{
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+    font-weight: 500;
+    font-style: normal;
+    color: grey;
+}
+.socialContainer{
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    /* padding-right: 20px; */
+    /* border: 2px solid black; */
+}
+.socialContainer > a{
+    /* border: 2px solid black; */
+    display: flex;
+    /* background: white; */
+    height: 40px;
+    width: 40px;
+}
+
+.textandline{
+    display: flex;
+    /* flex-direction: column; */
+    justify-content: flex-end;
+    /* border: 2px solid black; */
+    padding: 10px;
+    /* height: 40px; */
+}
+.textandline > a{
+    font-size: 55px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    color:black;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.textline{
+    position: sticky;
+    min-width: 290px;
+    left: 1130px;
+    z-index: -1;
+    margin-bottom:5px;
+}
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 2; }
+}
+.textandline:hover .textline{
+    -webkit-animation: fadein 1.5s;
+    border-bottom: 25px solid #ff8e3c;
+
+}
+/* .textandline:hover + .aboutImage{
+    -webkit-animation: fadein 1.5s;
+
+} */
+.droptextandline{
+    /* display: flex; */
+    /* border: 2px solid black; */
+    width: 250px;
+    height: 90px;
+}
+.droptextandline > a{
+    position: relative;
+    z-index: 1;
+}
+.dropline{
+    position:relative;
+    bottom: 35px;
+    margin: 0;
+    padding: 0;
+    /* border-bottom: 20px solid orange; */
+    z-index: 0;
+}
+.droptextandline:hover  .dropline{
+    -webkit-animation: fadein 1.5s;
+
+    border-bottom: 20px solid orange;
+
+}
+.dropDown{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    height: 0;
+    /* border: 2px solid green; */
+    background-color: white;
+    transition: height 1.5s;
+    overflow-y: hidden;
+    z-index: 3;
+}
+#dropdownBtnContainer{
+    align-self: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+}
+#dropdownBtnContainer > div > a{
+    font-size: 60px;
+}
+.aboutImage{
+    object-fit: cover;
+    grid-row: 1/5;
+    grid-column: 1/5;
+    z-index: 0;
+    opacity: 0;
+    transition: all 1.3s;
+    /* overflow: hidden; */
+}
+.outside{
+    height: 100vh;
+    background-color: red;
+}
+
+.aboutContainer{
+    height: 100vh; 
+    display: flex;
+    flex-direction: row;
+    /* border: 2px solid black; */
+    
+    /* background-color: #ff8e3c; */
+}
+
+
+
+.hobbiesContainer{
+    height: 100vh;
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    /* border: 2px solid black; */
+    background-color: #eff0f3;
+}
+.sectionImgContainer{
+    display: flex;
+    flex: 1;
+    /* height: 30%; */
+    /* height: 100%;
+    width: 60%; */
+    /* border: 2px solid red; */
+}
+.hobbietitlecontainer{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    /* border: 2px solid black; */
+    
+
+}
+#hobbiequote{
+    align-self: center;
+    font-size: 18px;
+    padding: 0;
+    margin: 0;
+    margin-top: 50px;
+
+}
+.titleHobbie{
+    grid-row: 3/4;
+    border-bottom: 2px solid black;
+    /* margin-left:30px; */
+    grid-column: 2/6;
+    display: flex;
+    justify-content: flex-start;
+    transition: all 1s ease-out;
+    /* border: 2px solid black; */
+}
+.hobbietitlecontainer > h1{
+    font-size: 40px;
+    margin: 0;
+    margin-top: 30px;
+}
+.hobbieNav{
+    /* border: 2px solid black; */
+    grid-column: 7/9;
+    grid-row: 2/9;
+    display: flex;
+    justify-content: center;
+}
+.hobbieDescription{
+    grid-row:2/9;
+    grid-column:4/7 ;
+    /* border: 2px solid red; */
+    display: grid;
+    /* border: 2px solid black; */
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: repeat(4,1fr);
+    transition: all 1.3s;
+
+}
+#skateInfo{
+    /* grid-row: 1/5;
+    grid-column: 1/5; */
+    opacity: 0;
+    /* transition: opacity 1s; */
+
+    /* -webkit-tran: fadein 1.5s; */
+
+}
+#hikeInfo{
+    opacity: 0;
+    /* transition: opacity 1s; */
+
+}
+#musicInfo{
+    opacity: 0;
+    /* transition: opacity 1s; */
+
+}
+#nftsInfo{
+    opacity: 0;
+    /* transition: opacity 1s; */
+
+}
+.hobbieLinks{
+    display: flex;
+    flex-direction: column;
+    height: 70%;
+    align-self: center;
+    /* border: 2px solid black; */
+}
+.hobbietextline{
+    display: flex;
+    flex-direction: column;
+}
+
+.hobbietextline > div{
+    position: relative;
+    /* border-bottom: 20px solid  #ff8e3c; */
+    bottom: 30px;
+    /* border-bottom: 20px solid orange; */
+    /* opacity: 2; */
+
+}
+/* .hobbietextline:hover div{
+    border-bottom: 20px solid #ff8e3c;
+    -webkit-animation: fadein 1.5s;
+
+} */
+/* #skateline{
+
+    border-bottom: 20px solid #ff8e3c;
+    opacity: 0;
+
+}
+#musicline{
+    border-bottom: 20px solid #ff8e3c;
+    opacity: 0;
+
+}
+#hikeline{
+    border-bottom: 20px solid #ff8e3c;
+    opacity: 0;
+
+}
+#nftline{
+    border-bottom: 20px solid #ff8e3c;
+    opacity: 0;
+
+} */
+
+.hobbietextline > a{
+    text-align: right;
+    z-index: 1;
+    font-size: 40px;
+    /* font-weight: bold; */
+    text-decoration: none;
+    color:black;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+}
+.sectionImgContainer2{
+    display: grid;
+    grid-row: 1/9;
+    grid-column: 1/4;
+
+    /* border: 2px solid black; */
+    /* grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr 1fr; */
+    /* height: 100%;
+    width: 60%; */
+    background-color: white;
+    background-image: linear-gradient(#eff0f3 1%, white 99%);
+
+}
+.sectionDescription{
+    display: flex;
+    flex-direction: column;
+    /* border: 2px solid blue; */
+    flex: 1;
+    justify-content: center;
+    align-items: center;
+    margin: 50px;
+    /* min-width: 200px; */
+    overflow: hidden;
+
+}
+#downloadCV{
+    font-family: roboto, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 15px;
+    padding: 10px;
+   margin: 0;
+   text-decoration: none;
+   color:black;
+   
+    /* border: 2px solid black; */
+
+   
+}
+#downloadCV:hover{
+    background-color: #ff8e3c;
+    transition:all 1s ease-in-out;
+}
+.downloadContainer{
+    display: flex; 
+    align-self: flex-start;
+    /* border: 2px solid black; */
+    flex-direction: row;
+    justify-content: flex-start;
+}
+.downloadContainer > span{
+    /* padding: 10px; */
+    margin: 0;
+    font-size: 20px;
+    /* height: 100%; */
+    /* font-family: playfair-display, sans-serif; */
+    font-weight: bold;
+    /* font-style: normal; */
+    align-content: center;
+    padding: 10px;
+    background-color: #ff8e3c;
+
+    /* border: 2px solid black; */
+  
+}
+#aboutSection{
+    object-fit:cover;
+
+}
+.text{
+    position: relative;
+    /* left:400px; */
+    /* right: 100px; */
+    /* padding-left: 300px;
+    bottom: 450px;
+    color:black;
+    font-size: 25px; */
+}
+.abt{
+    width: 100%;
+    align-self: flex-start;
+    border-bottom: 2px solid black;
+    display: flex;
+    /* border: 2px solid red; */
+
+}
+.abt > a {
+    align-self:flex-end;
+}
+#aboutTitleSection{
+    /* text-align: center; */
+    /* border-bottom: 2px solid black; */
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    /* text-align: left; */
+    align-self: flex-start;
+    }
+#aboutDescriptionSection{
+    font-size: 20px;
+    word-spacing: 2px;
+    text-align: left;
+
+    font-family: playfair-display, serif;
+    font-weight: 100;
+    font-style: normal;
+   
+}
+
+
+.projectImgContainer{
+    display: flex;
+    height: 45%;
+    width: 100%;
+    /* border: 2px solid black; */
+    background-color: white;
+    align-content: center;
+
+}
+.projectImgContainer > img{
+    flex: 1;
+    object-fit: contain;
+    width: 100%;
+    height: 100%;
+    padding: 20px;
+
+}
+.contentContainer{
+    display: flex;
+    flex-direction: column;
+    /* margin-right: 50px;
+    margin-left: 50px; */
+    margin: 20px 30px 20px 30px;
+        /* background-color: white; */
+
+}
+.contentContainer > p{
+    margin: 0;
+    padding: 0;
+    font-family: playfair-display, serif;
+    font-weight: 100;
+    font-style: normal;
+}
+
+.checkOutBtn{
+    display: flex;
+    justify-content: center;
+    /* border: 2px solid black; */
+    width: 35%;
+    margin-left: 30px;
+    margin-top: 20px;
+    /* height: 30px; */
+    
+}
+#directional{
+  /* margin: 5px; */
+  text-align: center;
+  flex: 1;
+  /* border: 2px solid red; */
+  background-color: #ff8e3c;
+    font-weight: bold;
+  align-items: center;
+  padding: 0;
+  padding-top: 5px;
+}
+#CIO{
+    flex: 2;
+    /* border: 2px solid red; */
+    text-align: center;
+    text-decoration: none;
+    color: black;
+    padding: 5px;
+    font-family: roboto, serif;
+    font-weight: 700;
+    font-style: normal;
+    font-size: 13px;
+
+    /* margin: 5px; */
+}
+#CIO:hover{
+    background-color: #ff8e3c;
+    transition: all 1s ease-in-out;
+}
+.titleSingle{
+    margin-bottom: 10px;
+    padding: 0;
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+}
+#projectsTitle{
+    text-align: right;
+    padding-right: 30px;
+    border-bottom: 2px solid black;
+    width: 75%;
+    /* position: absolute; */
+    /* padding-top: 20px; */
+    font-family: playfair-display, serif;
+    font-weight: 900;
+    font-style: normal;
+    font-size: 40px;
+    /* flex:1; */
+    align-self: center;
+    
+    
+    /* border-bottom: 2px solid black; */
+    /* align-items: center; */
+}
+.projectContainer{
+    height:100vh;
+    max-height: auto;
+    /* border: 2px solid red; */
+    /* padding-bottom: 40px; */
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    /* justify-content: space-around; */
+        background-color: #eff0f3;
+
+}
+.projectCardContainer{
+    display: flex;
+    flex: 2;
+    
+    border: 2px solid purple;
+    justify-content: space-around;
+    /* height: 80%; */
+}
+.projectCards{
+    /* border: 2px solid black; */
+    height: 500px;
+    max-width: 400px;
+    align-self: center;
+    /* margin-top: 80px; */
+        /* background-color: #eff0f3; */
+        background-color:white;
+    
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+
+}
+.ppContainer{
+    display: flex;
+    flex: 2;
+    flex-wrap: wrap;
+    /* max-height: 90%; */
+    justify-content: space-around;
+}
+.hobbieCards{
+    display: grid;
+    grid-template-columns: repeat(8,1fr);
+    grid-template-rows: repeat(8,1fr);
+    /* flex-direction: column;
+    justify-content: space-around; */
+    /* border: 2px solid black; */
+    width: 100%;
+    gap: 40px;
+}
+.hobbiePhotosM{
+    display: none;
+}
+.hCard{
+    /* border: 2px solid black; */
+    grid-row: 1/5;
+    grid-column: 1/5;
+    padding: 30px;
+    display: flex;
+    /* border: 2px solid black; */
+    flex-direction: column;
+    justify-content: center;
+    margin-left: 90px;
+    /* box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px; */
+    /* background-color: white; */
+    /* background-color: #eff0f3; */
+
+    /* height: 40%; */
+}
+.hCard > h1{
+    font-family: playfair-display, sans-serif;
+    font-weight: 900;
+    font-style: normal;
+    margin: 0;
+    padding:0;
+    text-align: center;
+    font-size: 25px;;
+    text-align: left;
+    border-bottom: 2px solid black;
+    
+}
+.hCard > p{
+    font-family: playfair-display, sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 25px;
+    text-align: left;
+}
+.hobbieLinks{
+    display: flex;
+    /* border: 2px solid black; */
+    width: 60%;
+    justify-content: space-between;
+    /* margin: 10px; */
+}
+.hobbiesLinks{
+    display: flex;
+    /* flex-direction: column; */
+    /* border: 2px solid black; */
+    width: 40%;
+    align-self: flex-start;
+    margin: 10px;
+    /* background-color:#ff8e3c; */
+}
+/* .hobbiestextline:hover{
+    background-color: #ff8e3c;
+
+} */
+.hobbieLinks > div{
+    flex: 1;
+}
+
+#arrow{
+    /* border: 2px solid black; */
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    font-weight: bold;
+    /* flex: .5;
+    display: flex; */
+    /* flex-direction: column; */
+    /* justify-content: center; */
+    background-color: #ff8e3c;
+    align-items: center;
+    
+
+}
+/* #arrow > a {
+    text-align: center;
+} */
+#mysounds{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 600;
+    /* border: 2px solid red; */
+    padding: 3px;
+font-size: 15px;
+
+    /* transition: background-color .5s ease-in-out; */
+}
+#videoMe{
+    /* position: fixed; */
+    /* grid-row:span; */
+    /* border: 2px solid red;
+    object-fit: cover; */
+}
+#mywallet{
+    flex: 3;
+    display: flex;
+    justify-content: center;
+    font-family: roboto, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    /* border: 2px solid red; */
+    padding: 3px;
+    transition: background-color .5s ease-in-out;
+
+}
+.hobbieLinks > span {
+    flex: 2;
+    text-align: center;
+    align-self: center;
+    font-family: playfair-display, sans-serif;
+    font-weight: 600;
+    font-size: 15px;
+    padding: 5px;
+    /* font-style: normal; */
+    /* margin: 10px */
+}
+/* .hobbietextline > div{
+    opacity:0;
+    border: 3px solid red;
+    background-color: pink;
+} */
+.hobbietextline:hover div {
+    /* z-index: 2; */
+    opacity:2;
+    border-bottom: 20px solid #ff8e3c;
+    -webkit-animation: fadein 1.5s;
+
+    /* transition: all 1s ease-in-out; */
+}
+/* #skate{
+    margin-left: 20px;
+    grid-row: 2/5;
+    grid-column: 1/5;
+
+}
+#hike{
+    grid-row: 2/5;
+    grid-column: 5/9;
+    margin-right: 20px;
+
+}
+#music{
+    grid-row: 5/8;
+    grid-column: 1/5;
+    margin-left: 20px;
+
+
+} */
+/* #nfts{
+    grid-row: 5/8;
+    grid-column: 5/9;
+    margin-right: 20px;
+
+} */
+
+#hobbieId{
+    grid-row:1/2;
+    grid-column: 4/6;
+    /* border-bottom: 2px solid black; */
+    text-align: center;
+    text-decoration: none;
+    font-family: playfair-display, sans-serif;
+    font-weight: 700;
+    /* font-style: normal; */
+    font-size: 35px;
+    
+}
+#elysium{
+
+}
+#miniDb{
+
+}
+#parkGym{
+
+}
+.hobbiePhotos{
+    flex: 1;
+    object-fit: cover;
+    grid-row: 1/3;
+    grid-column: 1/3;
+    transition: all 1.3s;
+
+    /* opacity:0; */
+}
+#hobbieVideo{
+    object-fit: cover;
+    grid-row: 1/4;
+    border: 2px solid red;
+}
+#skateimg{
+    opacity: 0;
+}
+#hikingimg{
+    opacity: 0;
+
+}
+#musicimg{
+    /* display: none; */
+    opacity: 0;
+
+}
+#nftimg{
+    object-fit: cover;
+    opacity: 0;
+
+}
+.hobbiePhotosM{
+    display: none;
+    opacity: 0;
+}
+@media(max-width: 850px){
+    .ppContainer{
+        display: flex;
+        /* height: 100%; */
+        /* border: 30px solid red; */
+        /* height: 100%; */
+        /* flex-direction: column; */
+        justify-content: space-around;
+    }
+    .projectContainer{
+        height: 100%;;
+    }
+    .projectCards{
+        height: 500px;
+        margin: 20px;
+    }
+    .navContainer{
+        display: none;
+
+    }
+    .aboutContainer{
+        display: flex;
+        flex-direction: column;
+        /* overflow: visible; */
+        /* border: 2px solid black; */
+    }
+    .sectionImgContainer{
+        height: 30%;
+        margin: 0;
+    }
+    .sectionImgContainer2{
+        display: none;
+    }
+    .sectionDescription{
+        margin: 0px 10px 0px 10px;
+    }
+    #aboutDescriptionSection{
+        font-size: 18px;
+    }
+    .hobbieNav{
+        display: none;
+    }
+    .hCard {
+        display: block;
+        flex: 1;
+        /* border: 2px solid red; */
+        /* padding: 10px; */
+        /* margin: 10px; */
+        /* width: 400px; */
+        /* height: 100%; */
+        margin: 20px 0px 20px 0px;
+    }
+    #skateInfo{
+        opacity: 1;
+    }
+    #hikeInfo{
+
+        opacity: 1;
+    }
+    #musicInfo{
+
+        opacity: 1;
+    }
+    #nftsInfo{
+
+        opacity: 1;
+    }
+    #skateimg{
+        opacity: 1;
+    }
+    #hikingimg{
+        opacity:1;
+    }
+    #musicimg{
+        opacity: 1;
+    }
+    #nftimg{
+        opacity: 1;
+    }
+
+    .hobbieDescription{
+        display: block;
+        /* border: 2px solid black; */
+        width:400px;
+        opacity: 1;
+
+
+    }
+    .hobbiePhotosM{
+        display: block;
+        opacity: 1;
+        margin-bottom: 20px;
+    }
+    .hobbiesContainer{
+        /* border: 2px solid red; */
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: space-between;
+        height: 100%;
+        width: 100%;
+    }
+}
