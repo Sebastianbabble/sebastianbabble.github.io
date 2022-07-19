@@ -1006,4 +1006,36 @@ font-size: 15px;
         height: 100%;
         width: 100%;
     }
+  
+}
+@media(max-width: 400px){
+
+    
+        .introText  > div{
+            font-size: 20px;
+            
+        }
+        .introText{
+            width: 300px;
+        }
+        #aboutDescriptionSection{
+            font-size: 16px;;
+        }
+        .sectionDescription{
+            margin: 20px;
+        }
+        .projectImgContainer> img{
+            padding: 0;
+            /* padding: 10px; */
+            margin: 10px;
+            width: 50px
+        }
+        .projectCards{
+            height: 600px;
+        }
+        .checkOutBtn{
+            width: 50%;
+        }
+       
+    
 }
