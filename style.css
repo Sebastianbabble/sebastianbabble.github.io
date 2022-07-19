@@ -215,6 +215,8 @@ color: grey;
 }
 .droptextandline > a{
     position: relative;
+    text-decoration: none;
+    color: black;
     z-index: 1;
 }
 .dropline{
@@ -237,6 +239,7 @@ color: grey;
     justify-content: center;
     width: 100%;
     height: 0;
+
     /* border: 2px solid green; */
     background-color: white;
     transition: height 1.5s;
@@ -779,6 +782,10 @@ font-size: 15px;
 
     /* transition: background-color .5s ease-in-out; */
 }
+.clm > a{
+    text-decoration: none;
+    color: black;
+}
 #videoMe{
     /* position: fixed; */
     /* grid-row:span; */
@@ -1031,10 +1038,13 @@ font-size: 15px;
             width: 50px
         }
         .projectCards{
-            height: 600px;
+            height: 550px;
         }
         .checkOutBtn{
             width: 50%;
+        }
+        .hCard > p{
+            font-size: 16px;
         }
        
     

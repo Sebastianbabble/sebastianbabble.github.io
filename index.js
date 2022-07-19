@@ -1,6 +1,6 @@
 const handleClick = () =>{
     console.log("hey")
-    AOS.init();
+    AOS.init({disable: 'mobile'});
 }
 const doSomething = () =>{
     // alert(did);
