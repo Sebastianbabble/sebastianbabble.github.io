@@ -914,6 +914,19 @@ font-size: 15px;
     display: none;
     opacity: 0;
 }
+.noDisplay{
+    display: none;
+}
+#hobbieTitles{
+    font-size: 40px;
+    font-family: playfair-display, sans-serif;
+    font-weight: 700;
+
+
+}
+.hobbiePhotosM > span{
+    font-size: 60px;
+}
 @media(max-width: 550px){
     .ppContainer{
         display: flex;
